@@ -8,15 +8,13 @@ public class Clank
     public static void main(String[] args) throws Exception 
     {
         Scanner scnr = new Scanner(System.in);
-        double initialMealPoints = 700;
         double currentMealPoints = 0;
         double mealPointsSpentAWeek = 0;
         int swipesAWeek = 6;
-        int startingWeek = 1;
-        int endingWeek = 16;
+        int weeksLeft;
 
-
-
+        System.out.println("Erick is the coolest person ever.");
+        System.out.println("OwO");
     
         System.out.println("Thank you for using the meal point calculator.  Please enter how many weeks are in your current semester (default is 16 weeks):");    
     
