@@ -8,18 +8,35 @@ public class Clank
     public static void main(String[] args) throws Exception 
     {
         Scanner scnr = new Scanner(System.in);
-        double initialMealPoints = 700;
-        double currentMealPoints = 0;
-        double mealPointsSpentAWeek = 0;
-        int swipesAWeek = 6;
-        int startingWeek = 1;
-        int endingWeek = 16;
+        // all default values intended to be changed
+        double currentMealPoints = 700;
+        //double mealPointsSpentAWeek = 0;
+        //int swipesAWeek = 6;
+        int weeksLeft = 16;
+        double endingPoints = 0;
+        int daysForMealPlan = 0;
+        System.out.println("Thank you for using the meal point calculator.  Please enter how many points you want to calculate for");    
+        currentMealPoints = scnr.nextDouble();
+        scnr.nextLine();
+        System.out.println("Please enter the amount of weeks left in the semester (default=16 weeks ) ");
+        weeksLeft = scnr.nextInt();
+        scnr.nextLine();
+        System.out.println("Please enter how many days you intend to use meal points to eat on campus");
+        daysForMealPlan  = scnr.nextInt();
+        if(daysForMealPlan >7)
+        {
+
+        }
+        // math time
+        endingPoints = currentMealPoints / weeksLeft;
+        System.out.print("You can spend " + endingPoints + " a week on meals and ");
+        endingPoints /= daysForMealPlan; 
+        System.out.print(endingPoints + " a day if you intend on using points " + daysForMealPlan + " days a week");
 
 
 
-    
-        System.out.println("Thank you for using the meal point calculator.  Please enter how many weeks are in your current semester (default is 16 weeks):");    
-    
+
+
     }
 }
 /*
