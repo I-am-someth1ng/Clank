@@ -1,3 +1,4 @@
+package clank;
 import java.util.Scanner;
 
 public class PointsProgram {
@@ -16,13 +17,18 @@ public class PointsProgram {
         System.out.println("Thank you for using the meal point calculator.  Please enter how many points you want to calculate for");    
         currentMealPoints = scnr.nextDouble();
         scnr.nextLine();
-        while(currentMealPoints<0)
+        while(currentMealPoints<=0)
         {
-            System.out.println("invalid number of days, please input a number greater than 0 (if you are an international student, I am sorry.)");
-            scnr.nextDouble();
+            System.out.println("invalid number of points, please input a number greater than 0 (if you are an international student, I am sorry.)");
+            currentMealPoints = scnr.nextDouble();
         }
-        System.out.println("Please enter the amount of weeks left in the semester (default is 16 weeks). ");
+        System.out.println("Please enter the amount of weeks left in the semester (default=16 weeks ) ");
         weeksLeft = scnr.nextInt();
+        while(weeksLeft <=0)
+        {
+        	System.out.println("Invalid amount of weeks please enter a number greater than 0");
+        	weeksLeft = scnr.nextInt();
+        }
         scnr.nextLine();
         System.out.println("Please enter how many days a week do you intend to use meal points to eat on campus");
         daysForMealPlan = scnr.nextInt();
